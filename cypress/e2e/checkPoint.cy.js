@@ -37,9 +37,6 @@ beforeEach(()=>{
 
     })
     it('Add to cart',()=>{
-       // cy.get('.site-search__controls__input').type(search)
-       // .type('{enter}')
-       // cy.get('.image-box').first().click()
         cy.get(".input-group__input").eq(1).type(email) 
         .type('{enter}')
         cy.get(".newsletter-signup").should('be.visible')
