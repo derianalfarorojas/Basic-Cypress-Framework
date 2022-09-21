@@ -19,8 +19,8 @@ beforeEach(()=>{
         cy.get('[alt="User Avatar"]').should('be.visible')
     })
 
-    it.only('Add Review',()=>{
-        cy.get('.site-search__controls__input').type("Bass")
+    it('Add Review',()=>{
+        cy.get('.site-search__controls__input').type("BumBUm")
         .type('{enter}')
         cy.get('.image-box').eq(2).click()
         cy.get(".csp-review-button").contains("Write a Product Review").click()     
@@ -36,7 +36,7 @@ beforeEach(()=>{
         cy.get(".alert-box__content").contains("Your review has been published. Thanks for helping other musicians!").should('be.visible')
 
     })
-    it('Add to cart',()=>{
+    it('Add email to subscribe',()=>{
         cy.get(".input-group__input").eq(1).type(email) 
         .type('{enter}')
         cy.get(".newsletter-signup").should('be.visible')
